@@ -289,16 +289,29 @@
 		</div>
 		
 		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
-			<a><i class="kirafont icon-calendar-fill"></i>2023年11月04日</a>
-			<a><i class="kirafont icon-edit-fill"></i>151 字</a>
-			<a><i class="kirafont icon-time-circle-fill"></i>大概 1 分钟</a>
+			<a><i class="kirafont icon-calendar-fill"></i>2023年11月06日</a>
+			<a><i class="kirafont icon-edit-fill"></i>562 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 2 分钟</a>
 		</div>
-		<h2><span id="此篇博客暂未编写完成等待后续更新">此篇博客暂未编写完成等待后续更新</span></h2><h2><span id="c与python在数据类型上的区别">c与python在数据类型上的区别</span></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+		<h2><span id="此篇博客暂未编写完成等待后续更新">此篇博客暂未编写完成等待后续更新</span></h2><h2><span id="c与python在数据类型上的区别">c与python在数据类型上的区别</span></h2><h3><span id="py数据类型">py数据类型</span></h3><h2><span id="整形int浮点数float复数complex布尔bool字符串string列表list元组tuple集合set字典dictionary">整形（int）<br>浮点数（float）<br>复数（complex）<br>布尔（bool）<br>字符串（string）<br>列表（list）<br>元组（tuple）<br>集合（set）<br>字典（dictionary）</span></h2><h3><span id="c数据类型">c数据类型</span></h3><h2><span id="整形浮点型字符类型构造类型-数组-结构体-共用体-枚举类型指针类型">整形<br>浮点型<br>字符类型<br>构造类型<br>{<br>  数组<br>    结构体<br>    共用体<br>    枚举类型<br>}<br>指针类型</span></h2><h3><span id="字符串类型只在py有">字符串类型只在py有</span></h3><p>关于python中字符串定义可以是单引号定义双引号定义和多个双引号定义</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> “abcd”</span><br><span class="line">‘abcd’</span><br><span class="line">“““abcd”””</span><br></pre></td></tr></table></figure>
+<h3><span id="c构造类型-数组与py列表">c构造类型-数组与py列表</span></h3><p>在c语言中数组的定义是有类型的</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int arr1[10];</span><br><span class="line">char arr2 [10];</span><br><span class="line">int* arr3[10];</span><br></pre></td></tr></table></figure>
+<p>只能存储对应类型的数据</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> int arr [10];</span><br><span class="line">arr[10]=&#123;1,2,3,4,5,6,7,8,9;10&#125;;</span><br></pre></td></tr></table></figure>
+<p>但是在py中没有对列表所存储内容做特定要求</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list = &#123;1，“abcd”，<span class="string">&quot;165165&quot;</span>&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3><span id="二维数组与列表">二维数组与列表</span></h3><p>关于c语言中二维数组的定义</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> int arr[10][3];</span><br><span class="line">//这里提一点关于c语言二维数组在定义中第一个[]中可以不给数值但是[]必须给数值</span><br></pre></td></tr></table></figure>
+<p>关于py二维列表定义</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list = &#123;&#123;1,2,3&#125;,&#123;4,5,6&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>关于下标索引<br>在一维二维中正向的下标索引在py和c中完全相同<br>但是在py中存在负下标索引[-1]表示最后一个元素<br>在c中[]本质是双目操作符进行的是指针运算 比如 arr[1] 可以等价于 *(arr+1)所以arr[1]写成1[arr]也是正确的</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
 
-<h3><span id="关于变量">关于变量</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
-<h3><span id="关于常量">关于常量</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
-
-
+<h3><span id="关于变量存储定义">关于变量存储定义</span></h3><p>在py中对于变量的存储没有类型限制</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a=10</span><br><span class="line">a=“awd”</span><br></pre></td></tr></table></figure>
+<p>但是在c中要先定义变量类型再进行存储</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int a = 10;</span><br></pre></td></tr></table></figure>
 
 
 <hr>
@@ -328,7 +341,7 @@
 	 
     <div class="kira-post-copyright">
         <strong>Author：</strong>seut<br>
-        <strong>Link：</strong><a href="http://example.com/2023/11/04/%E5%85%B3%E4%BA%8E%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC/" title="http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;11&#x2F;04&#x2F;关于表达式求值&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;11&#x2F;04&#x2F;关于表达式求值&#x2F;</a><br>
+        <strong>Link：</strong><a href="http://example.com/2023/11/06/seut1/" title="http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;11&#x2F;06&#x2F;seut1&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;11&#x2F;06&#x2F;seut1&#x2F;</a><br>
         
             <strong>实现脑海中的每一个天马行空————seut
         
