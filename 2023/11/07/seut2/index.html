@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="/css/layout.css">
 
 		
-		<title> 关于python与c的一些区别 -  seut</title>
+		<title> 有符号数与无符号数的整形提升 -  seut</title>
 		<link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
 		<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
 		<!-- lazyload -->
@@ -278,70 +278,39 @@
 <div class="kira-post">
 	<article>
 		
-		<div class="kira-post-cover">
+		<div
+			class="kira-post-cover"
+			style="padding-bottom: '56.25%'"
+		>
 			<img
-				data-src="https://upload-bbs.miyoushe.com/upload/2023/11/05/387521852/c3a3960dc87eaa50a7f5594e89d9195d_2863062913777424096.jpg?x-oss-process=image/resize,s_600/quality,q_80/auto-orient,0/interlace,1/format,jpg"
+				data-src="https://upload-bbs.miyoushe.com/upload/2023/11/04/387521852/8407df095b86aa0d29e55fc330dce201_1163619874524608330.jpg?x-oss-process=image/resize,s_600/quality,q_80/auto-orient,0/interlace,1/format,jpg"
 				data-sizes="auto"
-				alt="关于python与c的一些区别"
+				alt="有符号数与无符号数的整形提升"
 				class="lazyload kira-post-cover-image disabled-kira-image"
 			/>
-			<h1>关于python与c的一些区别</h1>
+			<h1>有符号数与无符号数的整形提升</h1>
 		</div>
 		
 		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
-			<a><i class="kirafont icon-calendar-fill"></i>2023年11月06日</a>
-			<a><i class="kirafont icon-edit-fill"></i>562 字</a>
-			<a><i class="kirafont icon-time-circle-fill"></i>大概 2 分钟</a>
+			<a><i class="kirafont icon-calendar-fill"></i>2023年11月07日</a>
+			<a><i class="kirafont icon-edit-fill"></i>834 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 3 分钟</a>
 		</div>
-		<h2><span id="此篇博客暂未编写完成等待后续更新">此篇博客暂未编写完成等待后续更新</span></h2><h2><span id="c与python在数据类型上的区别">c与python在数据类型上的区别</span></h2><h3><span id="py数据类型">py数据类型</span></h3><h2><span id="整形int浮点数float复数complex布尔bool字符串string列表list元组tuple集合set字典dictionary">整形（int）<br>浮点数（float）<br>复数（complex）<br>布尔（bool）<br>字符串（string）<br>列表（list）<br>元组（tuple）<br>集合（set）<br>字典（dictionary）</span></h2><h3><span id="c数据类型">c数据类型</span></h3><h2><span id="整形浮点型字符类型构造类型-数组-结构体-共用体-枚举类型指针类型">整形<br>浮点型<br>字符类型<br>构造类型<br>{<br>  数组<br>    结构体<br>    共用体<br>    枚举类型<br>}<br>指针类型</span></h2><h3><span id="字符串类型只在py有">字符串类型只在py有</span></h3><p>关于python中字符串定义可以是单引号定义双引号定义和多个双引号定义</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> “abcd”</span><br><span class="line">‘abcd’</span><br><span class="line">“““abcd”””</span><br></pre></td></tr></table></figure>
-<h3><span id="c构造类型-数组与py列表">c构造类型-数组与py列表</span></h3><p>在c语言中数组的定义是有类型的</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int arr1[10];</span><br><span class="line">char arr2 [10];</span><br><span class="line">int* arr3[10];</span><br></pre></td></tr></table></figure>
-<p>只能存储对应类型的数据</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> int arr [10];</span><br><span class="line">arr[10]=&#123;1,2,3,4,5,6,7,8,9;10&#125;;</span><br></pre></td></tr></table></figure>
-<p>但是在py中没有对列表所存储内容做特定要求</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list = &#123;1，“abcd”，<span class="string">&quot;165165&quot;</span>&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3><span id="二维数组与列表">二维数组与列表</span></h3><p>关于c语言中二维数组的定义</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> int arr[10][3];</span><br><span class="line">//这里提一点关于c语言二维数组在定义中第一个[]中可以不给数值但是[]必须给数值</span><br></pre></td></tr></table></figure>
-<p>关于py二维列表定义</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list = &#123;&#123;1,2,3&#125;,&#123;4,5,6&#125;&#125;</span><br></pre></td></tr></table></figure>
-<p>关于下标索引<br>在一维二维中正向的下标索引在py和c中完全相同<br>但是在py中存在负下标索引[-1]表示最后一个元素<br>在c中[]本质是双目操作符进行的是指针运算 比如 arr[1] 可以等价于 *(arr+1)所以arr[1]写成1[arr]也是正确的</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
-
-<h3><span id="关于变量存储定义">关于变量存储定义</span></h3><p>在py中对于变量的存储没有类型限制</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a=10</span><br><span class="line">a=“awd”</span><br></pre></td></tr></table></figure>
-<p>但是在c中要先定义变量类型再进行存储</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int a = 10;</span><br></pre></td></tr></table></figure>
-
-
-<hr>
-<h2><span id="c与python在操作符上的差异">c与python在操作符上的差异</span></h2><h3><span id="优先级">优先级</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
-
-<h3><span id="结合性">结合性</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
-
-<h3><span id="表达式求值顺序">表达式求值顺序</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
-<h3><span id="关于相同表达式在windows和linux上运算顺序出现不相同">关于相同表达式在windows和linux上运算顺序出现不相同</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
-<hr>
-<h2><span id="c与python在数据容器上的区别">c与python在数据容器上的区别</span></h2><h3><span id="数组与列表">数组与列表</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2><span id="c与python在语法格式上的一些差异">c与python在语法格式上的一些差异</span></h2><h3><span id="基础格式">基础格式</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
-
-<h3><span id="判断语句">判断语句</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
-
-<h3><span id="循环语句">循环语句</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
-<h3><span id="函数">函数</span></h3><hr>
-<h2><span id="c与python在数据存储上的区别">c与python在数据存储上的区别</span></h2><h3><span id="指针">指针</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
-<h3><span id="野指针的越界相关问题">野指针的越界相关问题</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
-
-<hr>
+		<h2><span id="前言我们在c语言中经常遇到一些奇怪的问题">前言:我们在c语言中经常遇到一些奇怪的问题</span></h2><h2><span id="比如12345678-include-ltstdiohgtint-main123signed-char-a-1有符号数-字符变量aunsigned-char-b-1无符号数-字符变量bprintfquotddquot-a-b结果为-1255return-0125接下来对这一类问题进行仔细分析">比如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">#include &lt;stdio.h&gt;</span></span><br><span class="line">int <span class="function"><span class="title">main</span></span>()</span><br><span class="line">&#123;</span><br><span class="line">	signed char a = -1;//有符号数 字符变量a</span><br><span class="line">	unsigned char b = -1;//无符号数 字符变量b</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d,%d&quot;</span>, a, b);//结果为-1,255</span><br><span class="line">	<span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>接下来对这一类问题进行仔细分析</span></h2><h2><span id="计算机的数据运算">计算机的数据运算</span></h2><p>表达式的整型运算要在CPU的相应运算器件内执行，CPU内整型运算器(ALU)的操作数的字节长度<br>一般就是int的字节长度，同时也是CPU的通用寄存器的长度。<br>因此，即使两个char类型的相加，在CPU执行时实际上也要先转换为CPU内整型操作数的标准长<br>度。<br>通用CPU（general-purpose CPU）是难以直接实现两个8比特字节直接相加运算（虽然机器指令<br>中可能有这种字节相加指令）。所以，表达式中各种长度可能小于int长度的整型值，都必须先转<br>换为int或unsigned int，然后才能送入CPU去执行运算<br>所以我们对数据进行表达式运算时都会先进行隐式类型转换</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">#include &lt;stdio.h&gt;</span></span><br><span class="line">int <span class="function"><span class="title">main</span></span>()</span><br><span class="line">&#123;</span><br><span class="line">	signed char a = -1;//有符号数 字符变量a</span><br><span class="line">	unsigned char b = -1;//无符号数 字符变量b</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d,%d&quot;</span>, a, b);//结果为-1,255</span><br><span class="line">	<span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2><span id="隐式类型转换的具体操作">隐式类型转换的具体操作</span></h2><p>在计算机运行中都是以数据的二进制补码进行运算的<br>比如<br>-1在32位二进制中补码为11111111111111111111111111111111<br>当我们把负一存入一个char类型的时候<br>因为char类型的大小只有1个字节只能存储8个比特位的数据，所以这个时候会发生数据截断<br>计算机只取从小到大的8位放入char中<br>所以在char 中存储的负一补码为11111111</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">#include &lt;stdio.h&gt;</span></span><br><span class="line">int <span class="function"><span class="title">main</span></span>()</span><br><span class="line">&#123;</span><br><span class="line">	signed char a = -1;//有符号数 字符变量a</span><br><span class="line">	unsigned char b = -1;//无符号数 字符变量b</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d,%d&quot;</span>, a, b);//结果为-1,255</span><br><span class="line">	<span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在上述代码中当以%d（有符号整形）输出一个char类型时，我们会对char类型中的数据进行整形提升</p>
+<h3><span id="有符号数的整形提升">有符号数的整形提升</span></h3><p>signed char作为一个有符号数，在进行整形提升时，即8位提升为32位会在高位补充它的符号位<br>比如11111111（-1）符号位为1则进行整形提升之后将变成11111111111111111111111111111111<br>所以输出的数值为负1</p>
+<h3><span id="无符号数的整形提升">无符号数的整形提升</span></h3><p>unsigned char 在进行整形提升时，因为它的是无符号数据在进行整形提升时便不会看符号位直接高位补0<br>比如11111111（-1）<br>高位补0——&gt;00000000000000000000000011111111<br>所以此时输出255</p>
+<h2><span id="关于补码计算的注意事项">关于补码计算的注意事项</span></h2><p>此时我们也要额外注意在对于函数返回值运算时，它的返回类型也会影响他的运算结果<br>比如在头文件 &lt;string.h&gt;下的函数strlen()的的返回值是size_t  是一个无符号整形，<br>如果我们在对他的返回值进行计算时出现了负数，那么他的补码将会是一个很大的值，导致最后的计算结果错误</p>
 
 	</article>
 
 	 
     <div class="kira-post-copyright">
         <strong>Author：</strong>seut<br>
-        <strong>Link：</strong><a href="http://example.com/2023/11/06/seut1/" title="http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;11&#x2F;06&#x2F;seut1&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;11&#x2F;06&#x2F;seut1&#x2F;</a><br>
+        <strong>Link：</strong><a href="http://example.com/2023/11/07/seut2/" title="http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;11&#x2F;07&#x2F;seut2&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;11&#x2F;07&#x2F;seut2&#x2F;</a><br>
         
             <strong>实现脑海中的每一个天马行空————seut
         
@@ -357,7 +326,7 @@
 	<div class="kira-post-meta kira-rainbow">
 		
 		
-			<a class="kirafont icon-tag-fill -none-link" href="/tags/c%E8%AF%AD%E8%A8%80/" rel="tag">c语言</a> <a class="kirafont icon-tag-fill -none-link" href="/tags/python/" rel="tag">python</a>
+			<a class="kirafont icon-tag-fill -none-link" href="/tags/c%E8%AF%AD%E8%A8%80/" rel="tag">c语言</a>
 		
 	</div>
 	
